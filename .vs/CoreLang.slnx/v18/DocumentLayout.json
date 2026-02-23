@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\poolg\\onedrive - intec\\escritorio\\uni\\tri 10\\construccion de software\\corelang\\corelang\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\poolg\\onedrive - intec\\escritorio\\uni\\tri 10\\construccion de software\\corelang\\corelang\\definition\\corelangparser.g4||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\definition\\corelangparser.g4||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\poolg\\onedrive - intec\\escritorio\\uni\\tri 10\\construccion de software\\corelang\\corelang\\definition\\corelanglexer.g4||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\definition\\corelanglexer.g4||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CoreLangParser.g4",
+              "DocumentMoniker": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\Definition\\CoreLangParser.g4",
+              "RelativeDocumentMoniker": "CoreLang\\Definition\\CoreLangParser.g4",
+              "ToolTip": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\Definition\\CoreLangParser.g4",
+              "RelativeToolTip": "CoreLang\\Definition\\CoreLangParser.g4",
+              "ViewState": "AgIAAJgAAAAAAAAAAAAswK8AAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-23T06:08:43.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CoreLangLexer.g4",
+              "DocumentMoniker": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\Definition\\CoreLangLexer.g4",
+              "RelativeDocumentMoniker": "CoreLang\\Definition\\CoreLangLexer.g4",
+              "ToolTip": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\Definition\\CoreLangLexer.g4",
+              "RelativeToolTip": "CoreLang\\Definition\\CoreLangLexer.g4",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAswEkAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-23T06:07:59.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\Program.cs",
+              "RelativeDocumentMoniker": "CoreLang\\Program.cs",
+              "ToolTip": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\Program.cs",
+              "RelativeToolTip": "CoreLang\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T04:29:42.247Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
