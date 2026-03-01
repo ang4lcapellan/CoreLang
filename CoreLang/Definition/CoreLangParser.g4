@@ -1,9 +1,12 @@
 parser grammar CoreLangParser;
 
+// Usa los tokens definidos en CoreLangLexer
 options { tokenVocab=CoreLangLexer; }
 
+// Regla inicial
 program : topLevelItem* EOF ;
 
+// Elementos permitidos en el nivel superior
 topLevelItem
     : useStmt
     | classDef
@@ -13,11 +16,14 @@ topLevelItem
     | compoundStmt
     ;
 
+// use Nombre;
 useStmt : USE IDENT SEMI ;
 
+// object Nombre { ... }
 classDef : OBJECT IDENT classBlock ;
 classBlock : LBRACE classMember* RBRACE ;
 
+// Miembros dentro de object
 classMember
     : varDecl SEMI
     | methodDef
@@ -25,11 +31,13 @@ classMember
     | compoundStmt
     ;
 
+// func Nombre(...) : tipo { ... }
 methodDef : FUNC IDENT LPAREN paramListOpt RPAREN COLON typeRef block ;
 
 entryFuncDef : ENTRY FUNC IDENT LPAREN paramListOpt RPAREN COLON typeRef block ;
-funcDef      : FUNC        IDENT LPAREN paramListOpt RPAREN COLON typeRef block ;
+funcDef      : FUNC IDENT LPAREN paramListOpt RPAREN COLON typeRef block ;
 
+// Parámetros
 paramListOpt
     : /* empty */
     | param (COMMA param)*
@@ -37,6 +45,7 @@ paramListOpt
 
 param : IDENT COLON typeRef ;
 
+// Tipos
 typeRef  : typeCore nullOpt ;
 typeCore : arrayType | baseType | classType ;
 
@@ -50,6 +59,7 @@ nullOpt
     | QMARK
     ;
 
+// Bloques y sentencias
 block : LBRACE stmt* RBRACE ;
 
 stmt : stmtSemi | compoundStmt ;
@@ -63,6 +73,7 @@ simpleStmt
     | expr
     ;
 
+// declare x : tipo = expr
 varDecl : DECLARE IDENT COLON typeRef initOpt ;
 
 initOpt
@@ -70,6 +81,7 @@ initOpt
     | ASSIGN expr
     ;
 
+// set x = expr
 setStmt : SET lvalue ASSIGN expr ;
 
 lvalue
@@ -77,10 +89,13 @@ lvalue
     | IDENT LBRACK expr RBRACK
     ;
 
+// gives expr
 givesStmt : GIVES expr ;
 
+// Control de flujo
 compoundStmt : checkStmt | loopStmt | repeatStmt ;
 
+// check (expr) { ... } otherwise { ... }
 checkStmt : CHECK LPAREN expr RPAREN block otherwiseOpt ;
 
 otherwiseOpt
@@ -88,6 +103,7 @@ otherwiseOpt
     | OTHERWISE block
     ;
 
+// loop ( init ; cond ; action ; ) { ... }
 loopStmt : LOOP LPAREN loopInit SEMI expr SEMI loopAction SEMI RPAREN block ;
 
 loopInit
@@ -102,10 +118,10 @@ loopAction
     | expr
     ;
 
+// repeat (expr) { ... }
 repeatStmt : REPEAT LPAREN expr RPAREN block ;
 
-// ----- expresiones (precedencia) -----
-
+// Expresiones (precedencia)
 expr : orExpr ;
 
 orExpr  : andExpr (OR andExpr)* ;
@@ -129,6 +145,7 @@ unaryExpr
     | primary
     ;
 
+// Primarios
 primary
     : literal
     | arrayLit
@@ -143,6 +160,7 @@ primary
     | LPAREN expr RPAREN
     ;
 
+// Llamadas
 callExpr : IDENT LPAREN argListOpt RPAREN ;
 
 argListOpt
@@ -150,9 +168,11 @@ argListOpt
     | expr (COMMA expr)*
     ;
 
+// Accesos
 memberAccess : IDENT DOT IDENT ;
 indexAccess  : IDENT LBRACK expr RBRACK ;
 
+// Funciones predefinidas
 lenCall   : LEN LPAREN IDENT RPAREN ;
 askCall   : ASK LPAREN lvalue RPAREN ;
 
@@ -161,12 +181,15 @@ convertName : CONV_INT | CONV_FLOAT | CONV_BOOL ;
 
 showCall  : SHOW LPAREN expr RPAREN ;
 
+// Arreglos literales
 arrayLit : LBRACK elementsOpt RBRACK ;
+
 elementsOpt
     : /* empty */
     | expr (COMMA expr)*
     ;
 
+// Literales
 literal
     : INT_LIT
     | FLOAT_LIT
