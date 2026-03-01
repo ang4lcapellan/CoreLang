@@ -24,3 +24,4 @@ C:\Users\poolg\OneDrive - INTEC\Escritorio\UNI\TRI 10\CONSTRUCCION DE SOFTWARE\C
 C:\Users\poolg\OneDrive - INTEC\Escritorio\UNI\TRI 10\CONSTRUCCION DE SOFTWARE\CoreLang\CoreLang\obj\Debug\net10.0\CoreLang.pdb
 C:\Users\poolg\OneDrive - INTEC\Escritorio\UNI\TRI 10\CONSTRUCCION DE SOFTWARE\CoreLang\CoreLang\obj\Debug\net10.0\CoreLang.genruntimeconfig.cache
 C:\Users\poolg\OneDrive - INTEC\Escritorio\UNI\TRI 10\CONSTRUCCION DE SOFTWARE\CoreLang\CoreLang\obj\Debug\net10.0\ref\CoreLang.dll
+C:\Users\poolg\OneDrive - INTEC\Escritorio\UNI\TRI 10\CONSTRUCCION DE SOFTWARE\CoreLang\CoreLang\obj\Debug\net10.0\CoreLang.sourcelink.json
