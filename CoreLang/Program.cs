@@ -1,9 +1,11 @@
-﻿using System;
+﻿// Program.cs (CORREGIDO)
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Antlr4.Runtime;
+using Antlr4.Runtime.Misc;
 using CoreLang.Nodes;
 
 namespace CoreLang
@@ -12,24 +14,23 @@ namespace CoreLang
     {
         static void Main(string[] args)
         {
-            // Suite de pruebas que cubre la mayoría de los nodos de la gramática
             string[] testSuite = new string[]
             {
-                // 1. Tipos de datos, Variables y Literales (BaseTypeNode, VariableDeclNode, LiteralNode)
+                // 1) Tipos / variables / literales
                 "declare edad: i = 25;",
                 "declare precio: f = 19.99;",
                 "declare activo: b = true;",
                 "declare nombre: s = \"CoreLang\";",
 
-                // 2. Operaciones Binarias y Unarias (BinaryExpressionNode, UnaryExpressionNode)
+                // 2) Binarias / unarias
                 "declare calc: i = (5 + 3) * 2;",
                 "declare logica: b = not (true and false);",
-                
-                // 3. Arreglos (ArrayTypeNode, ArrayLiteralNode, ArrayAccessNode)
+
+                // 3) Arreglos
                 "declare list: i[3] = [1, 2, 3];",
                 "set list[0] = 5;",
 
-                // 4. Objetos y Acceso a Miembros (ClassNode, ClassTypeNode, MemberAccessNode)
+                // 4) Objetos y member access (solo lectura, no asignación)
                 @"
                 object Persona {
                     declare nombre: s;
@@ -38,7 +39,7 @@ namespace CoreLang
                 show(p.nombre);
                 ",
 
-                // 5. Control de Flujo (IfNode, LoopNode, RepeatNode)
+                // 5) Control de flujo
                 @"
                 check (edad > 18) {
                     show(""Es mayor"");
@@ -46,18 +47,21 @@ namespace CoreLang
                     show(""Es menor"");
                 }
                 ",
+
+                // ✅ CORREGIDO: tu gramática exige ';' antes de ')'
                 @"
-                loop(declare j: i = 0; j < 5; set j = j + 1) {
+                loop(declare j: i = 0; j < 5; set j = j + 1; ) {
                     show(j);
                 }
                 ",
+
                 @"
                 repeat(activo == true) {
                     set activo = false;
                 }
                 ",
 
-                // 6. Funciones, Calls (Built-ins y Custom) y Returns (FunctionNode, ParameterNode, CallNode, ReturnNode)
+                // 6) Funciones
                 @"
                 func sumar(x: i, y: i): i {
                     gives x + y;
@@ -66,10 +70,10 @@ namespace CoreLang
                 show(resultado);
                 ",
 
-                // 7. Modificadores de Programa (UseNode, EntryFuncDef)
+                // 7) Use + entry
                 @"
                 use System;
-                
+
                 entry func principal() : i {
                     gives 0;
                 }
@@ -97,39 +101,32 @@ namespace CoreLang
             var tokenStream = new CommonTokenStream(lexer);
             var parser = new CoreLangParser(tokenStream);
 
+            // ✅ Mostrar errores sintácticos
             parser.RemoveErrorListeners();
-            // Evitar spam de syntax errors en la prueba
-            // parser.AddErrorListener(new DiagnosticErrorListener());
+            parser.AddErrorListener(new DiagnosticErrorListener());
 
             var tree = parser.program();
             var visitor = new AstBuilderVisitor();
-            
+
             try
             {
                 var ast = (ProgramNode)visitor.Visit(tree);
-                if (ast != null)
-                {
-                    PrintAst(ast);
-                }
+                if (ast != null) PrintAst(ast);
             }
             catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Error construyendo AST:\n{ex.ToString()}");
+                Console.WriteLine($"Error construyendo AST:\n{ex}");
                 Console.ResetColor();
             }
         }
 
         static void PrintAst(AstNode node, string indent = "")
         {
-            if (node == null) return;
-            
-            // Imprimir el nodo actual
             Console.WriteLine($"{indent}- {node.GetType().Name} (L:{node.Line}, C:{node.Column})");
 
-            // Buscar propiedades que sean AstNode o listas de AstNode e imprimirlas
             var properties = node.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance)
-                .Where(p => p.Name != "Line" && p.Name != "Column"); // Ignorar propiedades base
+                .Where(p => p.Name != "Line" && p.Name != "Column");
 
             foreach (var prop in properties)
             {
@@ -145,9 +142,7 @@ namespace CoreLang
                     foreach (var item in collection)
                     {
                         if (item is AstNode collectionNode)
-                        {
                             PrintAst(collectionNode, indent + "  ");
-                        }
                     }
                 }
             }
