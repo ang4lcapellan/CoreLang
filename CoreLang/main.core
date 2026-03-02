@@ -1,0 +1,6 @@
+use System;
+
+entry func principal() : i {
+    declare edad: i = 25;
+    gives 0;
+}

@@ -1,12 +1,14 @@
-﻿// Program.cs (CORREGIDO)
+﻿// Program.cs (VERSIÓN FINAL - COMPILADOR REAL)
+
 using System;
-using System.Collections;
-using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Collections;
 using Antlr4.Runtime;
-using Antlr4.Runtime.Misc;
 using CoreLang.Nodes;
+using CoreLang.Semantic;
+using CoreLang.Semantic.Exceptions;
 
 namespace CoreLang
 {
@@ -14,109 +16,78 @@ namespace CoreLang
     {
         static void Main(string[] args)
         {
-            string[] testSuite = new string[]
+            Console.ForegroundColor = ConsoleColor.Cyan;
+            Console.WriteLine("CoreLang Compiler");
+            Console.ResetColor();
+
+            if (args.Length == 0)
             {
-                // 1) Tipos / variables / literales
-                "declare edad: i = 25;",
-                "declare precio: f = 19.99;",
-                "declare activo: b = true;",
-                "declare nombre: s = \"CoreLang\";",
-
-                // 2) Binarias / unarias
-                "declare calc: i = (5 + 3) * 2;",
-                "declare logica: b = not (true and false);",
-
-                // 3) Arreglos
-                "declare list: i[3] = [1, 2, 3];",
-                "set list[0] = 5;",
-
-                // 4) Objetos y member access (solo lectura, no asignación)
-                @"
-                object Persona {
-                    declare nombre: s;
-                }
-                declare p: Persona? = null;
-                show(p.nombre);
-                ",
-
-                // 5) Control de flujo
-                @"
-                check (edad > 18) {
-                    show(""Es mayor"");
-                } otherwise {
-                    show(""Es menor"");
-                }
-                ",
-
-                // ✅ CORREGIDO: tu gramática exige ';' antes de ')'
-                @"
-                loop(declare j: i = 0; j < 5; set j = j + 1; ) {
-                    show(j);
-                }
-                ",
-
-                @"
-                repeat(activo == true) {
-                    set activo = false;
-                }
-                ",
-
-                // 6) Funciones
-                @"
-                func sumar(x: i, y: i): i {
-                    gives x + y;
-                }
-                declare resultado: i = sumar(10, 5);
-                show(resultado);
-                ",
-
-                // 7) Use + entry
-                @"
-                use System;
-
-                entry func principal() : i {
-                    gives 0;
-                }
-                "
-            };
-
-            for (int i = 0; i < testSuite.Length; i++)
-            {
-                Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.WriteLine($"\n================== TEST {i + 1} ==================");
-                Console.ResetColor();
-                Console.WriteLine(testSuite[i].Trim());
                 Console.ForegroundColor = ConsoleColor.Yellow;
-                Console.WriteLine("------------------ AST -------------------");
+                Console.WriteLine("Usage: dotnet run <file.core>");
                 Console.ResetColor();
-
-                TestCode(testSuite[i]);
+                return;
             }
+
+            string filePath = args[0];
+
+            if (!File.Exists(filePath))
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"File not found: {filePath}");
+                Console.ResetColor();
+                return;
+            }
+
+            string code = File.ReadAllText(filePath);
+            Compile(code);
         }
 
-        static void TestCode(string code)
+        static void Compile(string code)
         {
-            var inputStream = new AntlrInputStream(code);
-            var lexer = new CoreLangLexer(inputStream);
-            var tokenStream = new CommonTokenStream(lexer);
-            var parser = new CoreLangParser(tokenStream);
-
-            // ✅ Mostrar errores sintácticos
-            parser.RemoveErrorListeners();
-            parser.AddErrorListener(new DiagnosticErrorListener());
-
-            var tree = parser.program();
-            var visitor = new AstBuilderVisitor();
-
             try
             {
+                // 1️⃣ Lexer
+                var inputStream = new AntlrInputStream(code);
+                var lexer = new CoreLangLexer(inputStream);
+                var tokenStream = new CommonTokenStream(lexer);
+
+                // 2️⃣ Parser
+                var parser = new CoreLangParser(tokenStream);
+                var tree = parser.program();
+
+                // 3️⃣ Análisis Semántico (requiere entry obligatorio)
+                var analyzer = new SemanticAnalyzer();
+                analyzer.Analyze(tree);
+
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("✔ Semantic analysis successful.");
+                Console.ResetColor();
+
+                // 4️⃣ Construcción del AST
+                var visitor = new AstBuilderVisitor();
                 var ast = (ProgramNode)visitor.Visit(tree);
-                if (ast != null) PrintAst(ast);
+
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine("\n--- AST ---");
+                Console.ResetColor();
+
+                PrintAst(ast);
+
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("\n✔ Compilation successful.");
+                Console.ResetColor();
+            }
+            catch (SemanticException ex)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(ex.Message);
+                Console.ResetColor();
             }
             catch (Exception ex)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"Error construyendo AST:\n{ex}");
+                Console.WriteLine("Unexpected error:");
+                Console.WriteLine(ex);
                 Console.ResetColor();
             }
         }
@@ -125,7 +96,8 @@ namespace CoreLang
         {
             Console.WriteLine($"{indent}- {node.GetType().Name} (L:{node.Line}, C:{node.Column})");
 
-            var properties = node.GetType().GetProperties(BindingFlags.Public | BindingFlags.Instance)
+            var properties = node.GetType()
+                .GetProperties(BindingFlags.Public | BindingFlags.Instance)
                 .Where(p => p.Name != "Line" && p.Name != "Column");
 
             foreach (var prop in properties)
