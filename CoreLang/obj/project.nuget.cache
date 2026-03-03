@@ -1,17 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "ZOcIeQcnYks=",
+  "dgSpecHash": "6ItZmkLD2b4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\zen01\\Downloads\\CoreLang-git\\CoreLang\\CoreLang.csproj",
+  "projectFilePath": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\CoreLang.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\zen01\\.nuget\\packages\\antlr4.runtime.standard\\4.13.1\\antlr4.runtime.standard.4.13.1.nupkg.sha512",
-    "C:\\Users\\zen01\\.nuget\\packages\\antlr4buildtasks\\12.14.0\\antlr4buildtasks.12.14.0.nupkg.sha512",
-    "C:\\Users\\zen01\\.nuget\\packages\\microsoft.build.framework\\18.0.2\\microsoft.build.framework.18.0.2.nupkg.sha512",
-    "C:\\Users\\zen01\\.nuget\\packages\\microsoft.build.utilities.core\\18.0.2\\microsoft.build.utilities.core.18.0.2.nupkg.sha512",
-    "C:\\Users\\zen01\\.nuget\\packages\\microsoft.net.stringtools\\18.0.2\\microsoft.net.stringtools.18.0.2.nupkg.sha512",
-    "C:\\Users\\zen01\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.0\\system.configuration.configurationmanager.9.0.0.nupkg.sha512",
-    "C:\\Users\\zen01\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.0\\system.diagnostics.eventlog.9.0.0.nupkg.sha512",
-    "C:\\Users\\zen01\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.6\\system.security.cryptography.protecteddata.9.0.6.nupkg.sha512"
+    "C:\\Users\\Oliver\\.nuget\\packages\\antlr4.runtime.standard\\4.13.1\\antlr4.runtime.standard.4.13.1.nupkg.sha512",
+    "C:\\Users\\Oliver\\.nuget\\packages\\antlr4buildtasks\\12.14.0\\antlr4buildtasks.12.14.0.nupkg.sha512",
+    "C:\\Users\\Oliver\\.nuget\\packages\\microsoft.build.framework\\18.0.2\\microsoft.build.framework.18.0.2.nupkg.sha512",
+    "C:\\Users\\Oliver\\.nuget\\packages\\microsoft.build.utilities.core\\18.0.2\\microsoft.build.utilities.core.18.0.2.nupkg.sha512",
+    "C:\\Users\\Oliver\\.nuget\\packages\\microsoft.net.stringtools\\18.0.2\\microsoft.net.stringtools.18.0.2.nupkg.sha512",
+    "C:\\Users\\Oliver\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.0\\system.configuration.configurationmanager.9.0.0.nupkg.sha512",
+    "C:\\Users\\Oliver\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.0\\system.diagnostics.eventlog.9.0.0.nupkg.sha512",
+    "C:\\Users\\Oliver\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.6\\system.security.cryptography.protecteddata.9.0.6.nupkg.sha512"
   ],
   "logs": []
 }
