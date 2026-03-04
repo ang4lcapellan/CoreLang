@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "CoreLang": {
+      "commandName": "Project",
+      "commandLineArgs": "test1.core\r\n"
+    }
+  }
+}

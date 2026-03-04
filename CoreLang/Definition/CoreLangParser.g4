@@ -27,6 +27,7 @@ classBlock : LBRACE classMember* RBRACE ;
 classMember
     : varDecl SEMI
     | methodDef
+    | entryFuncDef
     | stmtSemi
     | compoundStmt
     ;
@@ -103,8 +104,8 @@ otherwiseOpt
     | OTHERWISE block
     ;
 
-// loop ( init ; cond ; action ; ) { ... }
-loopStmt : LOOP LPAREN loopInit SEMI expr SEMI loopAction SEMI RPAREN block ;
+// loop ( init ; cond ; action ) { ... }
+loopStmt : LOOP LPAREN loopInit SEMI expr SEMI loopAction RPAREN block ;
 
 loopInit
     : /* empty */
@@ -161,12 +162,12 @@ primary
     ;
 
 // Llamadas
-callExpr : IDENT LPAREN argListOpt RPAREN ;
-
 argListOpt
     : /* empty */
     | expr (COMMA expr)*
     ;
+
+callExpr : IDENT (DOT IDENT)? LPAREN argListOpt RPAREN ;
 
 // Accesos
 memberAccess : IDENT DOT IDENT ;

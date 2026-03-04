@@ -1,4 +1,8 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using Antlr4.Runtime.Misc;
+using Antlr4.Runtime.Tree;
 using CoreLang.Semantic.Exceptions;
 using CoreLang.Semantic.Scopes;
 using CoreLang.Semantic.Symbols;
@@ -129,6 +133,7 @@ namespace CoreLang.Semantic
 
         public override TypeSymbol VisitClassMember([NotNull] CoreLangParser.ClassMemberContext context)
         {
+            if (context.entryFuncDef() != null) return Visit(context.entryFuncDef());
             if (context.varDecl() != null) return Visit(context.varDecl());
             if (context.methodDef() != null) return Visit(context.methodDef());
             if (context.stmtSemi() != null) return Visit(context.stmtSemi());
@@ -157,6 +162,9 @@ namespace CoreLang.Semantic
                 var method = new MethodSymbol(name, returnType, _currentScope);
                 RegisterParams(method, context.paramListOpt());
                 _currentScope.Define(method, context.Start.Line, context.Start.Column);
+                
+                if (_currentClass != null)
+                    _currentClass.Members[name] = method;
             }
             else
             {
@@ -718,40 +726,76 @@ namespace CoreLang.Semantic
 
         public override TypeSymbol VisitCallExpr([NotNull] CoreLangParser.CallExprContext context)
         {
-            var name = context.IDENT().GetText();
-            var symbol = _currentScope.Resolve(name);
-
-            if (symbol is MethodSymbol method)
+            var idents = context.children.Where(c => c is ITerminalNode t && t.Symbol.Type == CoreLangLexer.IDENT).Select(c => c.GetText()).ToList();
+            
+            if (idents.Count == 2)
             {
-                var argListOpt = context.argListOpt();
-                var args = argListOpt?.expr() ?? System.Array.Empty<CoreLangParser.ExprContext>();
-
-                if (args.Length != method.Parameters.Count)
-                    throw new SemanticException(
-                        $"Function '{name}' expects {method.Parameters.Count} arguments, got {args.Length}.",
+                // object.method(...)
+                string objectName = idents[0];
+                string methodName = idents[1];
+                
+                var objSymbol = _currentScope.Resolve(objectName);
+                if (objSymbol == null)
+                    throw new SemanticException($"Variable '{objectName}' is not declared.",
                         context.Start.Line, context.Start.Column);
-
-                for (int i = 0; i < args.Length; i++)
-                {
-                    var argType = Visit(args[i]);
-                    var paramType = method.Parameters[i].Type;
-                    if (argType != null && !paramType.IsAssignableFrom(argType))
-                        throw new SemanticException(
-                            $"Argument {i + 1} of '{name}': expected '{paramType}', got '{argType}'.",
-                            args[i].Start.Line, args[i].Start.Column);
-                }
-
+                        
+                var classSymbol = _currentScope.Resolve(objSymbol.Type.Name) as ClassSymbol;
+                if (classSymbol == null)
+                    throw new SemanticException($"Type '{objSymbol.Type}' is not a class.",
+                        context.Start.Line, context.Start.Column);
+                        
+                if (!classSymbol.Members.TryGetValue(methodName, out var member) || !(member is MethodSymbol method))
+                    throw new SemanticException($"Class '{classSymbol.Name}' has no method '{methodName}'.",
+                        context.Start.Line, context.Start.Column);
+                        
+                ValidateArguments(method, context.argListOpt(), methodName, context.Start.Line, context.Start.Column);
                 return method.ReturnType;
             }
-
-            if (symbol is ClassSymbol)
+            else
             {
-                // Constructor-like call — returns the class type
-                return symbol.Type;
-            }
+                // Global call
+                var name = idents[0];
+                var symbol = _currentScope.Resolve(name);
 
-            throw new SemanticException($"'{name}' is not a callable function.",
-                context.Start.Line, context.Start.Column);
+                if (symbol == null)
+                    throw new SemanticException($"Function '{name}' is not declared.", 
+                        context.Start.Line, context.Start.Column);
+
+                if (symbol is MethodSymbol method)
+                {
+                    ValidateArguments(method, context.argListOpt(), name, context.Start.Line, context.Start.Column);
+                    return method.ReturnType;
+                }
+
+                if (symbol is ClassSymbol)
+                {
+                    // Constructor-like call — returns the class type
+                    return new TypeSymbol(name);
+                }
+
+                throw new SemanticException($"'{name}' is not a function.", 
+                    context.Start.Line, context.Start.Column);
+            }
+        }
+        
+        private void ValidateArguments(MethodSymbol method, CoreLangParser.ArgListOptContext argListOpt, string name, int line, int col)
+        {
+            var args = argListOpt?.expr() ?? System.Array.Empty<CoreLangParser.ExprContext>();
+
+            if (args.Length != method.Parameters.Count)
+                throw new SemanticException(
+                    $"Function '{name}' expects {method.Parameters.Count} arguments, got {args.Length}.",
+                    line, col);
+
+            for (int i = 0; i < args.Length; i++)
+            {
+                var argType = Visit(args[i]);
+                var paramType = method.Parameters[i].Type;
+                if (argType != null && !paramType.IsAssignableFrom(argType))
+                    throw new SemanticException(
+                        $"Argument {i + 1} of '{name}': expected '{paramType}', got '{argType}'.",
+                        args[i].Start.Line, args[i].Start.Column);
+            }
         }
 
         // ───────────────────────── SPECIAL FUNCTIONS ─────────────────────────
