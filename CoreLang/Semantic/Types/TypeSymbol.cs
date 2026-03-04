@@ -24,7 +24,7 @@ namespace CoreLang.Semantic.Types
             if (other == BuiltInTypes.Null)
                 return IsNullable;
 
-            if (this == other)
+            if (this.Equals(other))
                 return true;
 
             // Nullable version accepts non-nullable of same base

@@ -348,22 +348,34 @@ public sealed class AstBuilderVisitor : CoreLangParserBaseVisitor<AstNode>
     // --- CALLS & ACCESS ---
     public override AstNode VisitCallExpr([NotNull] CoreLangParser.CallExprContext context)
     {
-        string funcName = context.IDENT().GetText();
+        var idents = context.children.Where(c => c is ITerminalNode t && t.Symbol.Type == CoreLangLexer.IDENT).Select(c => c.GetText()).ToList();
+        string? objectName = null;
+        string funcName;
+
+        if (idents.Count == 2)
+        {
+            objectName = idents[0];
+            funcName = idents[1];
+        }
+        else
+        {
+            funcName = idents[0];
+        }
+        
         var arguments = new List<ExpressionNode>();
 
-        var argOpt = context.argListOpt();
-        if (argOpt != null)
+        if (context.argListOpt() != null)
         {
-            foreach (var exprCtx in argOpt.expr())
+            foreach (var exprCtx in context.argListOpt().expr())
+            {
                 arguments.Add((ExpressionNode)Visit(exprCtx));
+            }
         }
-
-        return new CallNode(funcName, arguments)
-        {
-            Line = context.Start?.Line ?? 0,
-            Column = context.Start?.Column ?? 0
-        };
+        
+        if (objectName != null) return new CallNode(objectName, funcName, arguments);
+        else return new CallNode(funcName, arguments);
     }
+
     public override AstNode VisitShowCall([NotNull] CoreLangParser.ShowCallContext context)
         => new CallNode("show", new List<ExpressionNode> { (ExpressionNode)Visit(context.expr()) })
         { Line = context.Start?.Line ?? 0, Column = context.Start?.Column ?? 0 };

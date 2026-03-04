@@ -13,9 +13,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!-- Add Antlr4 build target for the grammar files -->
+    <Antlr4 Include="Definition\*.g4">
+      <Generator>MSBuild:Compile</Generator>
+      <OutputDirectory>Generated</OutputDirectory>
+      <CustomToolNamespace>CoreLang.Generated</CustomToolNamespace>
+    </Antlr4>
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Definition\" />
     <Folder Include="Enumerations\" />
     <Folder Include="Exceptions\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="test1.core">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

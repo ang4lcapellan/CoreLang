@@ -28,7 +28,7 @@ namespace CoreLang
                 return;
             }
 
-            string filePath = args[0];
+            string filePath = Path.GetFullPath(args[0]);
 
             if (!File.Exists(filePath))
             {
