@@ -1,58 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\",
+  "WorkspaceRootPath": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\oliver\\source\\repos\\corelang1\\corelang\\test1.core||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\poolg\\onedrive - intec\\escritorio\\uni\\tri 10\\construccion de software\\corelang\\corelang\\semantic\\semanticanalyzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\semantic\\semanticanalyzer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\poolg\\onedrive - intec\\escritorio\\uni\\tri 10\\construccion de software\\corelang\\corelang\\test2malo.core||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\test2malo.core||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\poolg\\onedrive - intec\\escritorio\\uni\\tri 10\\construccion de software\\corelang\\corelang\\test1.core||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\test1.core||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\oliver\\source\\repos\\corelang1\\corelang\\definition\\corelangparser.g4||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\definition\\corelangparser.g4||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\poolg\\onedrive - intec\\escritorio\\uni\\tri 10\\construccion de software\\corelang\\corelang\\out.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\out.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\oliver\\source\\repos\\corelang1\\corelang\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\poolg\\onedrive - intec\\escritorio\\uni\\tri 10\\construccion de software\\corelang\\corelang\\definition\\corelanglexer.g4||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\definition\\corelanglexer.g4||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\poolg\\onedrive - intec\\escritorio\\uni\\tri 10\\construccion de software\\corelang\\corelang\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\oliver\\source\\repos\\corelang1\\corelang\\corelang.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\corelang.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\oliver\\source\\repos\\corelang1\\corelang\\astbuildervisitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\astbuildervisitor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\oliver\\source\\repos\\corelang1\\corelang\\nodes\\assignmentnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\nodes\\assignmentnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\oliver\\source\\repos\\corelang1\\corelang\\nodes\\astnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\nodes\\astnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\oliver\\source\\repos\\corelang1\\corelang\\nodes\\binaryexpressionnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\nodes\\binaryexpressionnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\oliver\\source\\repos\\corelang1\\corelang\\nodes\\blocknode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\nodes\\blocknode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\oliver\\source\\repos\\corelang1\\corelang\\nodes\\callnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\nodes\\callnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\oliver\\source\\repos\\corelang1\\corelang\\nodes\\literalnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\nodes\\literalnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\oliver\\source\\repos\\corelang1\\corelang\\nodes\\basetypenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\nodes\\basetypenode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\oliver\\source\\repos\\corelang1\\corelang\\definition\\corelanglexer.g4||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\definition\\corelanglexer.g4||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|c:\\users\\poolg\\onedrive - intec\\escritorio\\uni\\tri 10\\construccion de software\\corelang\\corelang\\nodes\\arrayaccessnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9F46D814-01F5-12CA-6BCA-5CB7BBD04702}|CoreLang\\CoreLang.csproj|solutionrelative:corelang\\nodes\\arrayaccessnode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -62,171 +38,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "BaseTypeNode.cs",
-              "DocumentMoniker": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Nodes\\BaseTypeNode.cs",
-              "RelativeDocumentMoniker": "CoreLang\\Nodes\\BaseTypeNode.cs",
-              "ToolTip": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Nodes\\BaseTypeNode.cs",
-              "RelativeToolTip": "CoreLang\\Nodes\\BaseTypeNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T11:04:49.025Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "test1.core",
-              "DocumentMoniker": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\test1.core",
-              "RelativeDocumentMoniker": "CoreLang\\test1.core",
-              "ToolTip": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\test1.core*",
-              "RelativeToolTip": "CoreLang\\test1.core*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-03-03T22:49:11.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "BlockNode.cs",
-              "DocumentMoniker": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Nodes\\BlockNode.cs",
-              "RelativeDocumentMoniker": "CoreLang\\Nodes\\BlockNode.cs",
-              "ToolTip": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Nodes\\BlockNode.cs",
-              "RelativeToolTip": "CoreLang\\Nodes\\BlockNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Title": "SemanticAnalyzer.cs",
+              "DocumentMoniker": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\Semantic\\SemanticAnalyzer.cs",
+              "RelativeDocumentMoniker": "CoreLang\\Semantic\\SemanticAnalyzer.cs",
+              "ToolTip": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\Semantic\\SemanticAnalyzer.cs",
+              "RelativeToolTip": "CoreLang\\Semantic\\SemanticAnalyzer.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAQwCUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T11:04:53.92Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BinaryExpressionNode.cs",
-              "DocumentMoniker": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Nodes\\BinaryExpressionNode.cs",
-              "RelativeDocumentMoniker": "CoreLang\\Nodes\\BinaryExpressionNode.cs",
-              "ToolTip": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Nodes\\BinaryExpressionNode.cs",
-              "RelativeToolTip": "CoreLang\\Nodes\\BinaryExpressionNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T11:04:54.284Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AstNode.cs",
-              "DocumentMoniker": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Nodes\\AstNode.cs",
-              "RelativeDocumentMoniker": "CoreLang\\Nodes\\AstNode.cs",
-              "ToolTip": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Nodes\\AstNode.cs",
-              "RelativeToolTip": "CoreLang\\Nodes\\AstNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T11:04:26.846Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AssignmentNode.cs",
-              "DocumentMoniker": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Nodes\\AssignmentNode.cs",
-              "RelativeDocumentMoniker": "CoreLang\\Nodes\\AssignmentNode.cs",
-              "ToolTip": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Nodes\\AssignmentNode.cs",
-              "RelativeToolTip": "CoreLang\\Nodes\\AssignmentNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T11:04:42.655Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AstBuilderVisitor.cs",
-              "DocumentMoniker": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\AstBuilderVisitor.cs",
-              "RelativeDocumentMoniker": "CoreLang\\AstBuilderVisitor.cs",
-              "ToolTip": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\AstBuilderVisitor.cs",
-              "RelativeToolTip": "CoreLang\\AstBuilderVisitor.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAALQAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T10:43:26.594Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Program.cs",
-              "RelativeDocumentMoniker": "CoreLang\\Program.cs",
-              "ToolTip": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Program.cs",
-              "RelativeToolTip": "CoreLang\\Program.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAADwvx4AAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T04:29:42.247Z",
+              "WhenOpened": "2026-03-04T22:31:53.583Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CoreLangParser.g4",
-              "DocumentMoniker": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Definition\\CoreLangParser.g4",
-              "RelativeDocumentMoniker": "CoreLang\\Definition\\CoreLangParser.g4",
-              "ToolTip": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Definition\\CoreLangParser.g4",
-              "RelativeToolTip": "CoreLang\\Definition\\CoreLangParser.g4",
-              "ViewState": "AgIAAKAAAAAAAAAAAAAkwL0AAAAYAAAAAAAAAA==",
+              "Title": "test2malo.core",
+              "DocumentMoniker": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\test2malo.core",
+              "RelativeDocumentMoniker": "CoreLang\\test2malo.core",
+              "ToolTip": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\test2malo.core",
+              "RelativeToolTip": "CoreLang\\test2malo.core",
+              "ViewState": "AgIAABUAAAAAAAAAAAAUwCYAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2026-02-23T06:08:43.868Z",
+              "WhenOpened": "2026-03-04T15:46:18.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "test1.core",
+              "DocumentMoniker": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\test1.core",
+              "RelativeDocumentMoniker": "CoreLang\\test1.core",
+              "ToolTip": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\test1.core",
+              "RelativeToolTip": "CoreLang\\test1.core",
+              "ViewState": "AgIAADoAAAAAAAAAAAAUwFMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-03-04T15:19:37.627Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "CoreLang.csproj",
-              "DocumentMoniker": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\CoreLang.csproj",
-              "RelativeDocumentMoniker": "CoreLang\\CoreLang.csproj",
-              "ToolTip": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\CoreLang.csproj",
-              "RelativeToolTip": "CoreLang\\CoreLang.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-03-03T22:45:46.296Z"
+              "Title": "out.txt",
+              "DocumentMoniker": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\out.txt",
+              "RelativeDocumentMoniker": "CoreLang\\out.txt",
+              "ToolTip": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\out.txt",
+              "RelativeToolTip": "CoreLang\\out.txt",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2026-03-03T13:57:58.833Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "CallNode.cs",
-              "DocumentMoniker": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Nodes\\CallNode.cs",
-              "RelativeDocumentMoniker": "CoreLang\\Nodes\\CallNode.cs",
-              "ToolTip": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Nodes\\CallNode.cs",
-              "RelativeToolTip": "CoreLang\\Nodes\\CallNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "ArrayAccessNode.cs",
+              "DocumentMoniker": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\Nodes\\ArrayAccessNode.cs",
+              "RelativeDocumentMoniker": "CoreLang\\Nodes\\ArrayAccessNode.cs",
+              "ToolTip": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\Nodes\\ArrayAccessNode.cs",
+              "RelativeToolTip": "CoreLang\\Nodes\\ArrayAccessNode.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T11:05:09.509Z"
+              "WhenOpened": "2026-03-02T21:51:19.397Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LiteralNode.cs",
-              "DocumentMoniker": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Nodes\\LiteralNode.cs",
-              "RelativeDocumentMoniker": "CoreLang\\Nodes\\LiteralNode.cs",
-              "ToolTip": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Nodes\\LiteralNode.cs",
-              "RelativeToolTip": "CoreLang\\Nodes\\LiteralNode.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-01T11:22:55.503Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 4,
               "Title": "CoreLangLexer.g4",
-              "DocumentMoniker": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Definition\\CoreLangLexer.g4",
+              "DocumentMoniker": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\Definition\\CoreLangLexer.g4",
               "RelativeDocumentMoniker": "CoreLang\\Definition\\CoreLangLexer.g4",
-              "ToolTip": "C:\\Users\\Oliver\\source\\repos\\CoreLang1\\CoreLang\\Definition\\CoreLangLexer.g4",
+              "ToolTip": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\Definition\\CoreLangLexer.g4",
               "RelativeToolTip": "CoreLang\\Definition\\CoreLangLexer.g4",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAswJYAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAIIAAAAAAAAAAAAAwJQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2026-02-23T06:07:59.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\Program.cs",
+              "RelativeDocumentMoniker": "CoreLang\\Program.cs",
+              "ToolTip": "C:\\Users\\poolg\\OneDrive - INTEC\\Escritorio\\UNI\\TRI 10\\CONSTRUCCION DE SOFTWARE\\CoreLang\\CoreLang\\Program.cs",
+              "RelativeToolTip": "CoreLang\\Program.cs",
+              "ViewState": "AgIAAGcAAAAAAAAAAAAiwHoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-23T04:29:42.247Z"
             }
           ]
         }

@@ -80,3 +80,4 @@ C:\Users\Oliver\source\repos\CoreLang1\CoreLang\obj\Debug\net10.0\refint\CoreLan
 C:\Users\Oliver\source\repos\CoreLang1\CoreLang\obj\Debug\net10.0\CoreLang.pdb
 C:\Users\Oliver\source\repos\CoreLang1\CoreLang\obj\Debug\net10.0\CoreLang.genruntimeconfig.cache
 C:\Users\Oliver\source\repos\CoreLang1\CoreLang\obj\Debug\net10.0\ref\CoreLang.dll
+C:\Users\poolg\OneDrive - INTEC\Escritorio\UNI\TRI 10\CONSTRUCCION DE SOFTWARE\CoreLang\CoreLang\bin\Debug\net10.0\test1.core
